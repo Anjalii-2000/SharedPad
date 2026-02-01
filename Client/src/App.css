@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: #f3f3f3;
+}
+
+.app {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  background: #2b579a;
+  color: white;
+  padding: 12px 20px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Editor container */
+.editor-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  overflow: auto;
+  position: relative;
+}
+
+/* Editor */
+.editor-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+}
+
+.editor {
+  width: 100%;
+  min-height: 100%;
+  padding: 30px;
+  font-size: 16px;
+  line-height: 1.6;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  resize: none;
+  outline: none;
+  background: white;
+  color: black;
+}
+
+/* Watermark */
+.watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  font-size: 60px;
+  color: rgba(0, 0, 0, 0.08);
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+}
+
+/* Save button */
+.save-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  background: #2b579a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.save-btn:hover {
+  background: #204d86;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .editor {
+    font-size: 14px;
+    padding: 20px;
+  }
+}
