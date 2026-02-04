@@ -2,7 +2,10 @@ import { useEffect, useState } from "react";
 import io from "socket.io-client";
 import "./App.css";
 
-const socket = io("http://localhost:5000");
+const socket = io("https://sharedpad.onrender.com");
+
+// enable below line for local debugging
+//const socket = io("http://localhost:5000"); // backend URL
 
 function App() {
   const [text, setText] = useState("");
@@ -51,7 +54,7 @@ function App() {
     await writable.write(text);
     await writable.close();
 
-    alert("File saved successfully ✅");
+    alert("File saved successfully.");
   } catch (err) {
     console.log("Save cancelled", err);
   }
