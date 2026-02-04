@@ -15,7 +15,7 @@ const io = new Server(server, {
 
 // server health check
 app.get("/", (req, res) => {
-  res.send("SharedPad™ server is running");
+  res.send("SharedPad™ Server is Running");
 });
 
 // Shared document state
